@@ -1,0 +1,33 @@
+---
+title: "Code Book"
+author: "Michael Park"
+output: html_document
+---
+Project Description
+
+  
+
+The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+Here are the data for the project: 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The goal of this analysis was to take each measurement that involved a mean or a standard deviation and find its mean taken individually by each of the 30 subjects, and individually by each of the six activity levels - walking, walking upstairs, walking downstairs, sitting, standing, and laying.
+
+A description of the original variables can be found in the file features_info in the UCI HAR project files. 
+
+In order to make the data easier to analyze, the original data sets were modified as follows:
+
+<UL><LI>the X_test and X_train data sets were made one data set, with the variable names from the features file applied as column headings
+<LI>the 86 values with mean or std in their name were extracted and placed in a new data set 
+<LI>the y_test and y_train data sets were combined and the numeric values were replaced with the appropriate descriptors from the activity_labels file
+<LI>a list of subjects was made from the files subject_test and subject_train
+<LI>the subject and activity level data were added as columns to the combined data set
+<LI>the variable names of the combined data set were cleaned up to make them easier to read</UL>
+  
+From this tidy data set a new data set was made containing the mean of each variable taken by student and by activity level. The first column contains the identifying variable describing what subset of the original data was taken. The columns that follow contain the mean of the values of the subset of data taken from the original variable of the same name.
+
+  
